@@ -12,14 +12,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Travel UI',
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          primaryColor: const Color(0xFF3EBACE),
-          scaffoldBackgroundColor: const Color(0xFFF3F5F7),
-          colorScheme: ColorScheme.fromSwatch(accentColor: Color(0xFFD8ECF1)),
-          useMaterial3: true,
+      title: 'Flutter Travel UI',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          primary: const Color(0xFF3EBACE),
+          seedColor: const Color(0xFFD8ECF1),
         ),
-        home: HomeScreen());
+        scaffoldBackgroundColor: const Color(0xFFF3F5F7),
+        useMaterial3: true,
+      ),
+      home: const HomeScreen(),
+    );
   }
 }
+
+// primaryColor: const Color(),
+// scaffoldBackgroundColor: ,
+// colorScheme: ColorScheme.fromSwatch(accentColor: Color()),
